@@ -20,12 +20,12 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
             return;
         }
 
-        if (!exists("searchField", exchange)){
+        if (!(exists("searchField", exchange) && exchange.getRequestMethod().equals("POST"))){
             response(404, "There was no given field to search for", exchange);
         }
 
         final String goalDatabase = getParameter("database", exchange);
-        final String goalField = getParameter("searchField", exchange);
+        final String goalField;
         final DatabaseManager databaseManager = bootStrap.getDatabaseManager();
 
         if (!databaseManager.getDataCollections().containsKey(goalDatabase)){
@@ -35,6 +35,8 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
         switch (exchange.getRequestMethod()) {
 
             case "GET" -> {
+                
+                goalField = getParameter("searchField", exchange);
 
                 if (exists(goalField, exchange)) {
 
@@ -58,6 +60,8 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
             }
 
             case "PUT" -> {
+
+                goalField = getParameter("searchField", exchange);
 
                 if (exists(goalField, exchange)) {
 
@@ -87,6 +91,7 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
 
             case "DELETE" -> {
 
+                goalField = getParameter("searchField", exchange);
 
                 if (exists(goalField, exchange)
                         || databaseManager.getDataCollections().get(goalDatabase)
