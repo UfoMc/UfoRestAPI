@@ -16,11 +16,16 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
 
         //search for parameter "database" in request string and return if connection is not valid
         if (!exists("database", exchange)){
-            response(404, "There was no givin goal database. Please insert parameter 'database=<database name>'", exchange);
+            response(404, "There was no given goal database. Please insert parameter 'database=<database name>'", exchange);
             return;
         }
 
+        if (!exists("searchField", exchange)){
+            response(404, "There was no given field to search for", exchange);
+        }
+
         final String goalDatabase = getParameter("database", exchange);
+        final String goalField = getParameter("searchField", exchange);
         final DatabaseManager databaseManager = bootStrap.getDatabaseManager();
 
         if (!databaseManager.getDataCollections().containsKey(goalDatabase)){
@@ -31,18 +36,21 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
 
             case "GET" -> {
 
-                if (exists("uuid", exchange)) {
+                if (exists(goalField, exchange)) {
 
+                    //initialize document
                     Document document = databaseManager.getDataCollections().get(goalDatabase)
-                            .find(Filters.eq("uuid", getParameter("uuid", exchange))).first();
+                            .find(Filters.eq(goalField, getParameter(goalField, exchange))).first();
 
                     if (document == null) {
+                        //return not found
                         response(404,
-                                "dungeonplayer not found (" + getParameter("uuid", exchange) + ")",
+                                "dungeonplayer not found (" + getParameter(goalField, exchange) + ")",
                                 exchange);
                         return;
                     }
 
+                    //return successful
                     response(200, document.toJson(), exchange);
 
                 }
@@ -51,19 +59,20 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
 
             case "PUT" -> {
 
-                if (exists("uuid", exchange)) {
+                if (exists(goalField, exchange)) {
 
+                    //put
                     String jsonPlayer = getBody(exchange);
 
                     databaseManager.getDataCollections().get(goalDatabase)
-                            .findOneAndReplace(Filters.eq("uuid", getParameter("uuid", exchange)),
+                            .findOneAndReplace(Filters.eq(goalField, getParameter(goalField, exchange)),
                                     Document.parse(jsonPlayer));
 
                     return;
 
                 }
 
-                response(404, "parameter was not found for dungeon player: " + getParameter("uuid", exchange), exchange);
+                response(404, "parameter was not found for dungeon player: " + getParameter(goalField, exchange), exchange);
 
             }
 
@@ -79,16 +88,16 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
             case "DELETE" -> {
 
 
-                if (exists("uuid", exchange)
+                if (exists(goalField, exchange)
                         || databaseManager.getDataCollections().get(goalDatabase)
-                        .find(Filters.eq("uuid", getParameter("uuid", exchange))) == null) {
+                        .find(Filters.eq(goalField, getParameter(goalField, exchange))) == null) {
                     response(404, "not found eighter the uuid was not given or the object is null", exchange);
                     return;
                 }
 
 
                 databaseManager.getDataCollections().get(goalDatabase)
-                        .deleteOne(Filters.eq("uuid", getParameter("uuid", exchange)));
+                        .deleteOne(Filters.eq(goalField, getParameter(goalField, exchange)));
 
             }
 
