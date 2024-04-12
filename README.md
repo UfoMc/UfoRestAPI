@@ -7,6 +7,7 @@ Hello :D
 
 #Usage
 
+ - The rest API uses the port 4281 for web interactions. If this port is already used for you just change it. 
  - Currently only MongoDB is supportet so if you use an other data base you have to change the code a bit
  - The MongoClient is binded on the standart Mongo Port. If you use an other port for your Database you got to change that up.
  - Use the RequestBuilder.jar to build a Request.
