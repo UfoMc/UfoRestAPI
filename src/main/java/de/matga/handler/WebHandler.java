@@ -47,7 +47,7 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
                     if (document == null) {
                         //return not found
                         response(404,
-                                "dungeonplayer not found (" + getParameter(goalField, exchange) + ")",
+                                "document not found (" + getParameter(goalField, exchange) + ")",
                                 exchange);
                         return;
                     }
@@ -76,7 +76,7 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
 
                 }
 
-                response(404, "parameter was not found for dungeon player: " + getParameter(goalField, exchange), exchange);
+                response(404, "parameter was not found for document: " + getParameter(goalField, exchange), exchange);
 
             }
 
@@ -96,7 +96,7 @@ public class WebHandler extends HandlerMethodes implements HttpHandler {
                 if (exists(goalField, exchange)
                         || databaseManager.getDataCollections().get(goalDatabase)
                         .find(Filters.eq(goalField, getParameter(goalField, exchange))) == null) {
-                    response(404, "not found eighter the uuid was not given or the object is null", exchange);
+                    response(404, "not found eighter the search field was not given or the object is null", exchange);
                     return;
                 }
 
