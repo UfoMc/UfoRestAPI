@@ -58,7 +58,8 @@ Config
   "enableCache": true,
   "cacheExpiration": 5,
   "maxCacheEntrySize": 1000,
-  "maxWeight": 20000```
+  "maxWeight": 20000
+```
 
 Copyright
 ---------
