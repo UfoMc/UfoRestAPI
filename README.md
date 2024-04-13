@@ -6,6 +6,13 @@ Aboud
  - I uploaded my own RestAPI. If you notice any possible bugs please feel free to contact me via discord (ufo.dev).
  - You can also contact me on discord if you have any questions about the usage or anything else.
 
+Wy sold I use a rest API?
+-
+ - Rest api´s make a lot of sense in many different cases.
+ - The most important advantages of a rest api are language independence, high speed requests and independence of any other application. 
+ - Also its eazy to use if you have basic knowlage of http and json.
+ - The rest API that I codet also contains a build in cache so you dont have to code 1 your self. 
+
 Usage
 -----
  - Use the RequestBuilder.jar to build a Request or get your self one out of the internet.
