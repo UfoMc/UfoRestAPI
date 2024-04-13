@@ -7,7 +7,7 @@ Aboud
 
 What is a rest API?
 -
- - A `Rest`full API is a basicly an indipendent application running on your server managing your data.
+ - A **Rest**full API is a basicly an indipendent application running on your server managing your data.
  - It funktions with building a connection to your database and reciving http requests wich tell them what to do.
 
 Wy sold I use a rest API?
