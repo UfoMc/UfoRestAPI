@@ -40,9 +40,9 @@ Config
    - `maxWeight` tells how big the cache is allowed to be
 
 
- - default config:
+ > default config:
    
-  `"httpPath": "webInteraction",
+  "httpPath": "webInteraction",
   "httpPort": "1234",
   "httpAddress": "127.0.0.1",
 
@@ -58,7 +58,7 @@ Config
   "enableCache": true,
   "cacheExpiration": 5,
   "maxCacheEntrySize": 1000,
-  "maxWeight": 20000`
+  "maxWeight": 20000
 
 Copyright
 ---------
