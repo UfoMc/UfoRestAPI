@@ -68,8 +68,7 @@ Copyright
 Request
 -------
 
-```
-java
+```java
 import com.google.gson.Gson;
 
 import java.io.IOException;
