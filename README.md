@@ -1,5 +1,5 @@
 
-<img src="banner.png" width="128"/>
+<img src="banner.png" width="2048" hight="400"/>
 
 About
 -----
