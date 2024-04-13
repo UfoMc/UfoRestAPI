@@ -1,4 +1,5 @@
 
+<img src="relative/path/in/repository/to/banner.png" width="128"/>
 
 About
 -----
