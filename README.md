@@ -1,6 +1,6 @@
 
 
-Aboud
+About
 -----
  - I uploaded my own RestAPI. If you notice any possible bugs please feel free to contact me via discord (ufo.dev).
  - You can also contact me on discord if you have any questions about the usage or anything else.
