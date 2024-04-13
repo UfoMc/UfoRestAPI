@@ -10,7 +10,7 @@ What is a rest API?
  - A **Rest**full API is a basicly an indipendent application running on your server managing your data.
  - It funktions with building a connection to your database and reciving http requests wich tell them what to do.
 
-Wy sold I use a rest API?
+Why should I use a rest API?
 -
  - Rest api´s make a lot of sense in many different cases.
  - The most important advantages of a rest api are language independence, high speed requests and independence of any other application. 
