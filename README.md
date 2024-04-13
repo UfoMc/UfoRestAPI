@@ -7,22 +7,22 @@ About
 
 What is a rest API?
 -
- - A **Rest**full API is a basicly an indipendent application running on your server managing your data.
- - It funktions with building a connection to your database and reciving http requests wich tell them what to do.
+ - A **Rest**full API is a basically an independent application running on your server managing your data.
+ - It functions with building a connection to your database and receiving http requests wich tell them what to do.
 
 Why should I use a rest API?
 -
- - Rest api´s make a lot of sense in many different cases.
- - The most important advantages of a rest api are language independence, high speed requests and independence of any other application. 
- - Also its eazy to use if you have basic knowlage of http and json.
- - The rest API that I codet also contains a build in cache so you dont have to code 1 your self. 
+ - rest api´s make a lot of sense in many different cases
+ - the most important advantages of a rest api are language independence, high speed requests and independence of any other applications 
+ - also its easy to use if you have basic knowledge of http and json
+ - the rest API that I coded also contains a build in cache so you dont have to code one for yourself 
 
 Usage
 -----
- - Use the RequestBuilder.jar to build a Request or get your self one out of the internet.
+ - use the RequestBuilder.jar to build a Request or get yourself one out of the internet
  - example for request: `http://127.0.0.1/webInteraction/database=<my database>&searchField=<user id or so>`
- - Following http methodes are supported: `POST, PUT, GET, DELETE`
- - after changing anything in the config a restart is necessary.
+ - following http methodes are supported: `POST, PUT, GET, DELETE`
+ - after changing anything in the config a restart is necessary
 
 Config
 ------
@@ -36,17 +36,17 @@ Config
    - `dataBaseType` is the type of your database. Valid is (`MongoDB; MariaDB; Config; MySQL`)
       If not valid automaticly `Config` is selected
    - `dataBasePort` is the port your dataBase is binded on
-   - `password` is the password of your database (only nessecary for MySQL and MariaDB)
-   - `user` is the user the client is connecting with (not nessecary for Config)
-   - `dataBaseAddress` is the address your database is located at. If it runs on the same server as the rest application leave it `127.0.0.1`
+   - `password` is the password of your database (only necessary for MySQL and MariaDB)
+   - `user` is the user the client is connecting with (not necessary for Config)
+   - `dataBaseAddress` is the address your database is located at. If it runs on the same server as the *rest* application leave it `127.0.0.1`.
 
   > tecnical
 
-   - `isReady` is the boolean that tells the system if the config is ready. This is false at basic. After the first start the config is been created. Set it up, then set `isReady` to true and restart.
+   - `isReady` is the boolean that tells the system if the config is ready. This is false at basic. After the first start the config gets created. Set it up, then set `isReady` to true and restart.
 
   > cache
-   - `enableChache` tells if you want to use a cache or not (normaly true but if you cache the data your save in your app just turn it off)
-   - `cacheExpiration` tells how long an object stays inside the database before expiering without beeing used in minutes.
+   - `enableChache` tells if you want to use a cache or not (normally true but if you cache the data yourself in your app just turn it off)
+   - `cacheExpiration` tells how long an object stays inside the database before expiring without beeing used in minutes
    - `maxCacheEntrySize` tells how many entrys the cache is allowed to have
    - `maxWeight` tells how big the cache is allowed to be
 
@@ -74,7 +74,7 @@ Config
 
 Copyright
 ---------
-> The Ufo Rest API is free 2 use. If u give me a credit or not is your choise. Please dont use it for commercial purposes! 
+> The Ufo Rest API is free to use. If u give me a credit or not is your choice. Please dont use it for commercial purposes! 
 
 Request
 -------
