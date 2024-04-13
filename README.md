@@ -3,12 +3,12 @@
 About
 -----
  - I uploaded my own RestAPI. If you notice any possible bugs please feel free to contact me via discord (ufo.dev).
- - You can also contact me on discord if you have any questions about the usage or anything else.
+ - you can also contact me on discord if you have any questions about the usage or anything else.
 
 What is a rest API?
 -
- - A **Rest**full API is a basically an independent application running on your server managing your data.
- - It functions with building a connection to your database and receiving http requests wich tell them what to do.
+ - a **Rest**full API is a basically an independent application running on your server managing your data.
+ - it functions with building a connection to your database and receiving http requests wich tell them what to do.
 
 Why should I use a rest API?
 -
