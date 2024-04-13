@@ -8,11 +8,8 @@ Aboud
 
 Usage
 -----
- - The rest API uses the port 4281 for web interactions. If this port is already used for you just change it. 
- - Currently only MongoDB is supportet so if you use an other data base you have to change the code a bit
- - The MongoClient is binded on the standart Mongo Port. If you use an other port for your Database you got to change that up.
- - Use the RequestBuilder.jar to build a Request.
- - example: `http://127.0.0.1/webInteraction/database=<my database>&searchField=<user id or so>`
+ - Use the RequestBuilder.jar to build a Request or get your self one out of the internet.
+ - example for request: `http://127.0.0.1/webInteraction/database=<my database>&searchField=<user id or so>`
  - Following http methodes are supported: `POST, PUT, GET, DELETE`
  - after changing anything in the config a restart is necessary.
 
