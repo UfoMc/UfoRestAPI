@@ -75,6 +75,8 @@ Config
   "maxWeight": 20000
 ```
 
+ - **DO NEVER TOUCH THE config-backup.json**
+
 Copyright
 ---------
 > The Ufo Rest API is free to use. If u give me a credit or not is your choice. Please dont use it for commercial purposes! 
