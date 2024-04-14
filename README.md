@@ -1,7 +1,7 @@
 
 <img src="banner.png" width="2048" hight="400"/>
 
-At the time there are some bugs I need to fix. When everything is fixed up the rest will be uploaded aigan :/
+**At the time there are some bugs I need to fix. When everything is fixed up the rest will be uploaded aigan :/**
 
 About
 -----
