@@ -15,7 +15,7 @@ What is a rest API?
 
 Why should I use a rest API?
 -
- - rest api´s make a lot of sense in many different cases
+ - rest apis make a lot of sense in many different cases
  - the most important advantages of a rest api are language independence, high speed requests and independence of any other applications 
  - also its easy to use if you have basic knowledge of http and json
  - the rest API that I coded also contains a build in cache so you dont have to code one for yourself 
