@@ -38,7 +38,7 @@ Config
   > database
    - `dataBaseType` is the type of your database. Valid is (`MongoDB; MariaDB; Config; MySQL`)
       If not valid automaticly `Config` is selected
-   - `dataBasePort` is the port your dataBase is binded on. Default: (MongoDB 27020; SQL 3306)
+   - `dataBasePort` is the port your dataBase is binded on. Default: (`MongoDB 27020; SQL 3306`)
    - `password` is the password of your database (only necessary for MySQL and MariaDB)
    - `user` is the user the client is connecting with (not necessary for Config)
    - `dataBaseAddress` is the address your database is located at. If it runs on the same server as the *rest* application leave it `127.0.0.1`.
